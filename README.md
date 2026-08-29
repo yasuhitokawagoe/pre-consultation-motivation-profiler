@@ -1,6 +1,6 @@
-# Pre-consultation Motivation & Decision Profiler
+# Pre-Consultation Patient Understanding System — Follow-up
 
-研究用 PoC v2.0。診察前に患者が大切にしていること、健康行動の障壁、受け取りやすい支援方法を整理し、医師向けの会話候補を提示します。
+研究用 PoC v3.0 の再診モード。現在の行動、継続度、障壁、意欲、自信、懸念、今日の相談事項を整理し、医師向けに一画面で提示します。
 
 ## Run
 
