@@ -15,7 +15,13 @@ createServer(async (req, res) => {
     res.writeHead(200, { "content-type": types[extname(file)] || "application/octet-stream", "cache-control": extname(file) === ".html" ? "no-cache" : "public, max-age=86400" });
     res.end(body);
   } catch {
-    try { res.writeHead(200, { "content-type": types[".html"] }); res.end(await readFile(join(root, "index.html"))); }
-    catch { res.writeHead(404); res.end("Not found"); }
+    try {
+      const fallback = await readFile(join(root, "index.html"));
+      if (!res.headersSent) res.writeHead(200, { "content-type": types[".html"] });
+      if (!res.writableEnded) res.end(fallback);
+    } catch {
+      if (!res.headersSent) res.writeHead(404);
+      if (!res.writableEnded) res.end("Not found");
+    }
   }
 }).listen(Number(process.env.PORT || 3000), "0.0.0.0", () => console.log(`Profiler listening on ${process.env.PORT || 3000}`));
