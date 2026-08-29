@@ -4,6 +4,7 @@ import { extname, join, normalize } from "node:path";
 
 const root = new URL("./public/", import.meta.url).pathname;
 const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript; charset=utf-8", ".svg": "image/svg+xml", ".png": "image/png" };
+const port = Number(process.env.APP_PORT || 3000);
 
 createServer(async (req, res) => {
   const url = new URL(req.url, "http://localhost");
@@ -24,4 +25,4 @@ createServer(async (req, res) => {
       if (!res.writableEnded) res.end("Not found");
     }
   }
-}).listen(Number(process.env.PORT || 3000), "0.0.0.0", () => console.log(`Profiler listening on ${process.env.PORT || 3000}`));
+}).listen(port, "0.0.0.0", () => console.log(`Profiler listening on ${port}`));
