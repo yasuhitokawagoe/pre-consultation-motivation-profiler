@@ -1,0 +1,12 @@
+{
+  "name": "pre-consultation-profiler",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.mjs",
+    "build": "node --check server.mjs",
+    "test": "node --check server.mjs"
+  }
+}

@@ -1,0 +1,24 @@
+node_modules/
+.pnpm-store/
+.DS_Store
+.env*
+npm-debug.log*
+pnpm-debug.log*
+
+# Unused starter files kept outside the deployable PoC
+app/
+build/
+db/
+drizzle/
+worker/
+tests/
+examples/
+.openai/
+drizzle.config.ts
+eslint.config.mjs
+next.config.ts
+postcss.config.mjs
+tsconfig.json
+vite.config.ts
+pnpm-lock.yaml
+pnpm-workspace.yaml
