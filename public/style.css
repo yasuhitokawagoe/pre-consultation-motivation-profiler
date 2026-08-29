@@ -121,5 +121,5 @@ button{font:inherit;color:inherit}
 .confidence button{min-height:120px;font-size:19px}
 .topic-grid.typography{grid-template-columns:repeat(2,1fr);max-width:760px;margin:12px auto 0;gap:14px}
 .topic-grid.typography button{min-height:66px;display:grid;place-items:center;padding:14px 22px;font-weight:650;line-height:1.4}
-@media(min-width:900px) and (orientation:landscape){.patient{padding-top:55px}.question{min-height:125px;margin-bottom:12px}.photo-grid{max-width:960px}.photo-grid .scene .photo-crop{height:190px}.photo-grid .scene-copy{min-height:58px}.page-step{margin-top:4px}}
+@media(min-width:900px) and (orientation:landscape){.patient{padding-top:42px}.question{min-height:105px;margin-bottom:10px}.photo-grid{max-width:960px}.photo-grid .scene .photo-crop{height:145px}.photo-grid .scene-copy{min-height:48px;padding-top:8px;padding-bottom:8px}.page-step{margin-top:3px}.patient>.actions{padding-top:12px;padding-bottom:12px}}
 @media(max-width:760px){.patient{padding-top:74px}.question{min-height:138px}.photo-grid{gap:11px}.photo-grid .scene .photo-crop{height:170px}.photo-grid .scene-copy{min-height:62px;padding:11px}.photo-grid .scene-copy b{font-size:15px}.patient>.actions{padding-left:18px;padding-right:18px}.topic-grid.typography{grid-template-columns:1fr 1fr}}
