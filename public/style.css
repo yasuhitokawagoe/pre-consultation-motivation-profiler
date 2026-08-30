@@ -150,3 +150,15 @@ button{font:inherit;color:inherit}
 .complete-photos .image-frame:nth-child(1){transform:rotate(-3deg)}
 .complete-photos .image-frame:nth-child(2){transform:rotate(3deg)}
 .dash-scenes .image-frame{width:110px;border-radius:14px;flex:none}
+
+/* Today topic photography */
+.topic-photo-grid{width:100%;max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.topic-photo-card{position:relative;padding:0;overflow:hidden;border:1px solid #e0e6e2;border-radius:20px;background:#fff;text-align:left;cursor:pointer;box-shadow:0 5px 20px #24473b0d;transition:transform .15s,box-shadow .15s}
+.topic-photo-card:active{transform:scale(.988)}
+.topic-photo-card>b{display:block;min-height:58px;padding:16px 18px;font-size:18px;line-height:1.4}
+.topic-photo-card>i{position:absolute;right:13px;top:13px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--green);font-style:normal;opacity:0;transform:scale(.6);transition:.15s;box-shadow:0 2px 9px #163c2d33}
+.topic-photo-card.selected{box-shadow:0 0 0 2px var(--green)}
+.topic-photo-card.selected img{filter:brightness(.83)}
+.topic-photo-card.selected>i{opacity:1;transform:scale(1)}
+@media(min-width:900px) and (orientation:landscape){.topic-photo-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.topic-photo-card>b{min-height:46px;padding:10px 12px;font-size:15px}}
+@media(max-width:620px){.topic-photo-grid{gap:10px}.topic-photo-card>b{min-height:50px;padding:11px 12px;font-size:15px}}
