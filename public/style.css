@@ -125,6 +125,8 @@ button{font:inherit;color:inherit}
 @media(max-width:760px){.patient{padding-top:74px}.question{min-height:138px}.photo-grid{gap:11px}.photo-grid .scene .photo-crop{height:170px}.photo-grid .scene-copy{min-height:62px;padding:11px}.photo-grid .scene-copy b{font-size:15px}.patient>.actions{padding-left:18px;padding-right:18px}.topic-grid.typography{grid-template-columns:1fr 1fr}}
 
 /* Visual Value Discovery v4.2 */
+.image-frame{display:block;width:100%;aspect-ratio:4/3;overflow:hidden;background:#e8ece9}
+.image-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .discovery{padding-top:42px;display:block;overflow-y:auto}
 .discovery .compact-question{min-height:118px;margin-bottom:16px}
 .discovery .compact-question h2{font-size:clamp(28px,3.2vw,43px);line-height:1.3}
@@ -134,6 +136,8 @@ button{font:inherit;color:inherit}
 .discovery-grid .scene:active{transform:scale(.985)}
 .discovery-grid .scene.selected{transform:scale(.985);box-shadow:0 0 0 2px var(--green)}
 .discovery-grid .scene .photo-crop{width:100%;height:auto;aspect-ratio:4/3;background-repeat:no-repeat}
+.discovery-grid .scene .image-frame{width:100%;height:auto;aspect-ratio:4/3}
+.discovery-grid .scene.selected .image-frame img{filter:brightness(.83)}
 .discovery-grid .scene.selected .photo-crop{filter:brightness(.83)}
 .discovery-grid .short-label{display:block;min-height:34px;padding:8px 10px 9px;background:#fff;font-size:13px;font-weight:650;line-height:1.3;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .discovery-grid .scene>i{width:24px;height:24px;right:9px;top:9px;font-size:12px;background:#fff;color:var(--green);box-shadow:0 2px 9px #163c2d33}
@@ -141,3 +145,8 @@ button{font:inherit;color:inherit}
 @media(min-width:900px) and (orientation:landscape){.discovery{padding-top:28px}.discovery .compact-question{min-height:95px;margin-bottom:10px}.discovery-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.discovery-grid .short-label{min-height:31px;padding:6px 9px 7px}.discovery-grid .scene .photo-crop{height:auto}}
 @media(max-width:899px) and (orientation:portrait){.discovery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.discovery .compact-question{min-height:126px}.discovery-grid .scene .photo-crop{height:auto}.discovery-grid .short-label{font-size:12px;padding-left:8px;padding-right:8px}}
 @media(max-width:620px){.discovery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.complete-photos .image-frame{width:230px;border-radius:22px;margin:0 -8px;box-shadow:0 12px 35px #273d3424}
+.complete-photos .image-frame:nth-child(1){transform:rotate(-3deg)}
+.complete-photos .image-frame:nth-child(2){transform:rotate(3deg)}
+.dash-scenes .image-frame{width:110px;border-radius:14px;flex:none}
