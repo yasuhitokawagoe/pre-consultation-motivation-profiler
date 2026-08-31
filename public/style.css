@@ -167,6 +167,10 @@ button{font:inherit;color:inherit}
 .age-grid{width:100%;max-width:760px;margin:24px auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .age-grid button{min-height:112px;border:1px solid #dce4df;border-radius:22px;background:#fff;font-size:25px;font-weight:750;cursor:pointer}
 .age-grid button.selected{border-color:var(--green);background:#e5eee9;box-shadow:0 0 0 2px var(--green)}
+.gender-grid{width:100%;max-width:760px;margin:24px auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gender-grid button{min-height:128px;border:1px solid #dce4df;border-radius:22px;background:#fff;font-size:24px;font-weight:750;cursor:pointer}
+.gender-grid button.selected{border-color:var(--green);background:#e5eee9;box-shadow:0 0 0 2px var(--green)}
+@media(max-width:620px){.gender-grid{grid-template-columns:1fr}.gender-grid button{min-height:76px}}
 .value-grid{max-width:1040px;grid-template-columns:repeat(3,minmax(0,1fr))}
 .value-grid .scene-copy{min-height:74px}
 @media(max-width:899px){.value-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
