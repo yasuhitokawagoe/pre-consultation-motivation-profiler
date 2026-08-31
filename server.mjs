@@ -4,7 +4,7 @@ import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("./public/", import.meta.url));
-const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript; charset=utf-8", ".svg": "image/svg+xml", ".png": "image/png" };
+const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript; charset=utf-8", ".svg": "image/svg+xml", ".png": "image/png", ".webp": "image/webp" };
 const port = Number(process.env.APP_PORT || 3000);
 
 createServer(async (req, res) => {
@@ -14,7 +14,9 @@ createServer(async (req, res) => {
   if (!file.startsWith(root)) { res.writeHead(403); return res.end("Forbidden"); }
   try {
     const body = await readFile(file);
-    res.writeHead(200, { "content-type": types[extname(file)] || "application/octet-stream", "cache-control": extname(file) === ".html" ? "no-cache" : "public, max-age=86400" });
+    const extension = extname(file);
+    const cacheControl = [".html", ".css", ".js"].includes(extension) ? "no-store, max-age=0" : "public, max-age=604800, immutable";
+    res.writeHead(200, { "content-type": types[extension] || "application/octet-stream", "cache-control": cacheControl });
     res.end(body);
   } catch {
     try {
